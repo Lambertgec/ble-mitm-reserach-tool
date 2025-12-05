@@ -1,0 +1,209 @@
+{
+  "device_info": {
+    "address": "78:02:B7:2B:40:C9",
+    "mtu": 244,
+    "connected": true,
+    "timestamp": "2025-12-05T01:46:49.264439"
+  },
+  "services": {
+    "00001800-0000-1000-8000-00805f9b34fb": {
+      "uuid": "00001800-0000-1000-8000-00805f9b34fb",
+      "description": "Generic Access Profile",
+      "characteristics": [
+        {
+          "uuid": "00002a00-0000-1000-8000-00805f9b34fb",
+          "description": "Device Name",
+          "properties": [
+            "read"
+          ],
+          "descriptors": [],
+          "value": "4f41543130343000",
+          "readable": true,
+          "writable": false,
+          "notifiable": false
+        },
+        {
+          "uuid": "00002a01-0000-1000-8000-00805f9b34fb",
+          "description": "Appearance",
+          "properties": [
+            "read"
+          ],
+          "descriptors": [],
+          "value": "0000",
+          "readable": true,
+          "writable": false,
+          "notifiable": false
+        },
+        {
+          "uuid": "00002a04-0000-1000-8000-00805f9b34fb",
+          "description": "Peripheral Preferred Connection Parameters",
+          "properties": [
+            "read"
+          ],
+          "descriptors": [],
+          "value": "2c0144010000f401",
+          "readable": true,
+          "writable": false,
+          "notifiable": false
+        }
+      ]
+    },
+    "0000180f-0000-1000-8000-00805f9b34fb": {
+      "uuid": "0000180f-0000-1000-8000-00805f9b34fb",
+      "description": "Battery Service",
+      "characteristics": [
+        {
+          "uuid": "00002a19-0000-1000-8000-00805f9b34fb",
+          "description": "Battery Level",
+          "properties": [
+            "notify",
+            "read"
+          ],
+          "descriptors": [
+            "00002902-0000-1000-8000-00805f9b34fb"
+          ],
+          "value": "64",
+          "readable": true,
+          "writable": false,
+          "notifiable": true
+        }
+      ]
+    },
+    "0000d0ff-3c17-d293-8e48-14fe2e4da212": {
+      "uuid": "0000d0ff-3c17-d293-8e48-14fe2e4da212",
+      "description": "Unknown",
+      "characteristics": [
+        {
+          "uuid": "0000ffd1-0000-1000-8000-00805f9b34fb",
+          "description": "Vendor specific",
+          "properties": [
+            "write-without-response"
+          ],
+          "descriptors": [],
+          "value": null,
+          "readable": false,
+          "writable": true,
+          "notifiable": false
+        },
+        {
+          "uuid": "0000ffd2-0000-1000-8000-00805f9b34fb",
+          "description": "Vendor specific",
+          "properties": [
+            "read"
+          ],
+          "descriptors": [],
+          "value": "7802b72b40c9",
+          "readable": true,
+          "writable": false,
+          "notifiable": false
+        },
+        {
+          "uuid": "0000ffd3-0000-1000-8000-00805f9b34fb",
+          "description": "Vendor specific",
+          "properties": [
+            "read"
+          ],
+          "descriptors": [],
+          "value": "b748",
+          "readable": true,
+          "writable": false,
+          "notifiable": false
+        },
+        {
+          "uuid": "0000ffd4-0000-1000-8000-00805f9b34fb",
+          "description": "Vendor specific",
+          "properties": [
+            "read"
+          ],
+          "descriptors": [],
+          "value": "fa03",
+          "readable": true,
+          "writable": false,
+          "notifiable": false
+        }
+      ]
+    },
+    "000055ff-0000-1000-8000-00805f9b34fb": {
+      "uuid": "000055ff-0000-1000-8000-00805f9b34fb",
+      "description": "Vendor specific",
+      "characteristics": [
+        {
+          "uuid": "000033f1-0000-1000-8000-00805f9b34fb",
+          "description": "Vendor specific",
+          "properties": [
+            "write",
+            "read"
+          ],
+          "descriptors": [],
+          "value": "000000000000000000000000000000000049006c",
+          "readable": true,
+          "writable": true,
+          "notifiable": false
+        },
+        {
+          "uuid": "000033f2-0000-1000-8000-00805f9b34fb",
+          "description": "Vendor specific",
+          "properties": [
+            "notify"
+          ],
+          "descriptors": [
+            "00002902-0000-1000-8000-00805f9b34fb"
+          ],
+          "value": null,
+          "readable": false,
+          "writable": false,
+          "notifiable": true
+        }
+      ]
+    },
+    "0000fee7-0000-1000-8000-00805f9b34fb": {
+      "uuid": "0000fee7-0000-1000-8000-00805f9b34fb",
+      "description": "Tencent Holdings Limited",
+      "characteristics": [
+        {
+          "uuid": "0000fec9-0000-1000-8000-00805f9b34fb",
+          "description": "Apple: Inc.",
+          "properties": [
+            "read"
+          ],
+          "descriptors": [],
+          "value": "7802b72b40c9",
+          "readable": true,
+          "writable": false,
+          "notifiable": false
+        },
+        {
+          "uuid": "0000fea1-0000-1000-8000-00805f9b34fb",
+          "description": "Intrepid Control Systems: Inc.",
+          "properties": [
+            "indicate",
+            "read"
+          ],
+          "descriptors": [
+            "00002902-0000-1000-8000-00805f9b34fb"
+          ],
+          "value": "07000000000000000000",
+          "readable": true,
+          "writable": false,
+          "notifiable": true
+        },
+        {
+          "uuid": "0000fea2-0000-1000-8000-00805f9b34fb",
+          "description": "Intrepid Control Systems: Inc.",
+          "properties": [
+            "indicate",
+            "write",
+            "read"
+          ],
+          "descriptors": [
+            "00002902-0000-1000-8000-00805f9b34fb"
+          ],
+          "value": "01a86100",
+          "readable": true,
+          "writable": true,
+          "notifiable": true
+        }
+      ]
+    }
+  }
+}
