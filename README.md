@@ -1,8 +1,8 @@
 # BLE MITM Security Research Tool
 Python-based BLE MITM security research tool for academic purposes
-**Authors:** Boldizsar Keszthelyi, Gergo Balaton
-**Course:** Lab on Offensive Security (2IC80) 2025-2026 Q2
-**Assignment:** Offensive Security - BLE MiTM Analysis on a device using "Just Works" pairing
+- **Authors:** Boldizsar Keszthelyi, Gergo Balaton
+- **Course:** Lab on Offensive Security (2IC80) 2025-2026 Q2
+- **Assignment:** Offensive Security - BLE MiTM Analysis on a device using "Just Works" pairing
 
 ## Overview
 Python tool for analyzing BLE security, specifically testing "Just Works" pairing vulnerabilities on a specific fitness tracker - the OAT1040.
@@ -29,4 +29,4 @@ Python tool for analyzing BLE security, specifically testing "Just Works" pairin
 - ## Installation
 
 ```bash
-pip install bleak asyncio```
+pip install bleak asyncio
