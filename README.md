@@ -11,7 +11,7 @@ Python tool for analyzing BLE security, specifically testing "Just Works" pairin
 
 - [x] Basic device scanning - Boldizsar (Lambertgec) 
 - [x] GATT service enumeration - Boldizsar (Lambertgec)
-- [x] Persistent connection and monitoring Gergo (Gergo Balaton)
+- [x] Persistent connection and monitoring Gergo - (Gergo Balaton)
 - [ ] MITM proxy
 - [ ] Packet modification
 - [ ] Security analysis module
