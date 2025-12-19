@@ -1,0 +1,1509 @@
+{
+  "device_info": {
+    "address": "4D:DE:CB:82:79:5A",
+    "mtu": 527,
+    "connected": true,
+    "timestamp": "2025-12-04T15:21:17.756601"
+  },
+  "services": {
+    "00001800-0000-1000-8000-00805f9b34fb": {
+      "uuid": "00001800-0000-1000-8000-00805f9b34fb",
+      "description": "Generic Access Profile",
+      "characteristics": [
+        {
+          "uuid": "00002a00-0000-1000-8000-00805f9b34fb",
+          "description": "Device Name",
+          "properties": [
+            "read"
+          ],
+          "descriptors": [],
+          "value": "415355535f524f475f5354524958",
+          "readable": true,
+          "writable": false,
+          "notifiable": false
+        },
+        {
+          "uuid": "00002a01-0000-1000-8000-00805f9b34fb",
+          "description": "Appearance",
+          "properties": [
+            "read"
+          ],
+          "descriptors": [],
+          "value": "8000",
+          "readable": true,
+          "writable": false,
+          "notifiable": false
+        },
+        {
+          "uuid": "00002a04-0000-1000-8000-00805f9b34fb",
+          "description": "Peripheral Preferred Connection Parameters",
+          "properties": [
+            "read"
+          ],
+          "descriptors": [],
+          "value": "160030000000c003",
+          "readable": true,
+          "writable": false,
+          "notifiable": false
+        },
+        {
+          "uuid": "00002aa6-0000-1000-8000-00805f9b34fb",
+          "description": "Central Address Resolution",
+          "properties": [
+            "read"
+          ],
+          "descriptors": [],
+          "value": "00",
+          "readable": true,
+          "writable": false,
+          "notifiable": false
+        }
+      ]
+    },
+    "00001801-0000-1000-8000-00805f9b34fb": {
+      "uuid": "00001801-0000-1000-8000-00805f9b34fb",
+      "description": "Generic Attribute Profile",
+      "characteristics": [
+        {
+          "uuid": "00002a05-0000-1000-8000-00805f9b34fb",
+          "description": "Service Changed",
+          "properties": [
+            "indicate"
+          ],
+          "descriptors": [
+            "00002902-0000-1000-8000-00805f9b34fb"
+          ],
+          "value": null,
+          "readable": false,
+          "writable": false,
+          "notifiable": true
+        },
+        {
+          "uuid": "00002b29-0000-1000-8000-00805f9b34fb",
+          "description": "Client Supported Features",
+          "properties": [
+            "write",
+            "read"
+          ],
+          "descriptors": [],
+          "value": "01",
+          "readable": true,
+          "writable": true,
+          "notifiable": false
+        },
+        {
+          "uuid": "00002b2a-0000-1000-8000-00805f9b34fb",
+          "description": "Database Hash",
+          "properties": [
+            "read"
+          ],
+          "descriptors": [],
+          "value": "eb3ce1568654870a2090fbdda919fff8",
+          "readable": true,
+          "writable": false,
+          "notifiable": false
+        }
+      ]
+    },
+    "0000180a-0000-1000-8000-00805f9b34fb": {
+      "uuid": "0000180a-0000-1000-8000-00805f9b34fb",
+      "description": "Device Information",
+      "characteristics": [
+        {
+          "uuid": "00002a50-0000-1000-8000-00805f9b34fb",
+          "description": "PnP ID",
+          "properties": [
+            "read"
+          ],
+          "descriptors": [],
+          "value": "0106000100000a",
+          "readable": true,
+          "writable": false,
+          "notifiable": false
+        }
+      ]
+    },
+    "0000184c-0000-1000-8000-00805f9b34fb": {
+      "uuid": "0000184c-0000-1000-8000-00805f9b34fb",
+      "description": "Generic Telephone Bearer Service",
+      "characteristics": [
+        {
+          "uuid": "00002bb3-0000-1000-8000-00805f9b34fb",
+          "description": "Bearer Provider Name",
+          "properties": [
+            "notify",
+            "read"
+          ],
+          "descriptors": [
+            "00002902-0000-1000-8000-00805f9b34fb"
+          ],
+          "value": null,
+          "readable": true,
+          "writable": false,
+          "notifiable": true
+        },
+        {
+          "uuid": "00002bb4-0000-1000-8000-00805f9b34fb",
+          "description": "Bearer UCI",
+          "properties": [
+            "read"
+          ],
+          "descriptors": [],
+          "value": null,
+          "readable": true,
+          "writable": false,
+          "notifiable": false
+        },
+        {
+          "uuid": "00002bb5-0000-1000-8000-00805f9b34fb",
+          "description": "Bearer Technology",
+          "properties": [
+            "notify",
+            "read"
+          ],
+          "descriptors": [
+            "00002902-0000-1000-8000-00805f9b34fb"
+          ],
+          "value": null,
+          "readable": true,
+          "writable": false,
+          "notifiable": true
+        },
+        {
+          "uuid": "00002bb6-0000-1000-8000-00805f9b34fb",
+          "description": "Bearer URI Schemes Supported List",
+          "properties": [
+            "notify",
+            "read"
+          ],
+          "descriptors": [
+            "00002902-0000-1000-8000-00805f9b34fb"
+          ],
+          "value": null,
+          "readable": true,
+          "writable": false,
+          "notifiable": true
+        },
+        {
+          "uuid": "00002bb9-0000-1000-8000-00805f9b34fb",
+          "description": "Bearer List Current Calls",
+          "properties": [
+            "notify",
+            "read"
+          ],
+          "descriptors": [
+            "00002902-0000-1000-8000-00805f9b34fb"
+          ],
+          "value": null,
+          "readable": true,
+          "writable": false,
+          "notifiable": true
+        },
+        {
+          "uuid": "00002bba-0000-1000-8000-00805f9b34fb",
+          "description": "Content Control ID",
+          "properties": [
+            "read"
+          ],
+          "descriptors": [],
+          "value": null,
+          "readable": true,
+          "writable": false,
+          "notifiable": false
+        },
+        {
+          "uuid": "00002bbb-0000-1000-8000-00805f9b34fb",
+          "description": "Status Flags",
+          "properties": [
+            "notify",
+            "read"
+          ],
+          "descriptors": [
+            "00002902-0000-1000-8000-00805f9b34fb"
+          ],
+          "value": null,
+          "readable": true,
+          "writable": false,
+          "notifiable": true
+        },
+        {
+          "uuid": "00002bbd-0000-1000-8000-00805f9b34fb",
+          "description": "Call State",
+          "properties": [
+            "notify",
+            "read"
+          ],
+          "descriptors": [
+            "00002902-0000-1000-8000-00805f9b34fb"
+          ],
+          "value": null,
+          "readable": true,
+          "writable": false,
+          "notifiable": true
+        },
+        {
+          "uuid": "00002bbe-0000-1000-8000-00805f9b34fb",
+          "description": "Call Control Point",
+          "properties": [
+            "notify",
+            "write",
+            "write-without-response"
+          ],
+          "descriptors": [
+            "00002902-0000-1000-8000-00805f9b34fb"
+          ],
+          "value": null,
+          "readable": false,
+          "writable": true,
+          "notifiable": true
+        },
+        {
+          "uuid": "00002bbf-0000-1000-8000-00805f9b34fb",
+          "description": "Call Control Point Optional Opcodes",
+          "properties": [
+            "read"
+          ],
+          "descriptors": [],
+          "value": null,
+          "readable": true,
+          "writable": false,
+          "notifiable": false
+        },
+        {
+          "uuid": "00002bc0-0000-1000-8000-00805f9b34fb",
+          "description": "Termination Reason",
+          "properties": [
+            "notify"
+          ],
+          "descriptors": [
+            "00002902-0000-1000-8000-00805f9b34fb"
+          ],
+          "value": null,
+          "readable": false,
+          "writable": false,
+          "notifiable": true
+        },
+        {
+          "uuid": "00002bc1-0000-1000-8000-00805f9b34fb",
+          "description": "Incoming Call",
+          "properties": [
+            "notify",
+            "read"
+          ],
+          "descriptors": [
+            "00002902-0000-1000-8000-00805f9b34fb"
+          ],
+          "value": null,
+          "readable": true,
+          "writable": false,
+          "notifiable": true
+        },
+        {
+          "uuid": "00002bc2-0000-1000-8000-00805f9b34fb",
+          "description": "Call Friendly Name",
+          "properties": [
+            "notify",
+            "read"
+          ],
+          "descriptors": [
+            "00002902-0000-1000-8000-00805f9b34fb"
+          ],
+          "value": null,
+          "readable": true,
+          "writable": false,
+          "notifiable": true
+        }
+      ]
+    },
+    "00001849-0000-1000-8000-00805f9b34fb": {
+      "uuid": "00001849-0000-1000-8000-00805f9b34fb",
+      "description": "Generic Media Control Service",
+      "characteristics": [
+        {
+          "uuid": "00002b93-0000-1000-8000-00805f9b34fb",
+          "description": "Media Player Name",
+          "properties": [
+            "notify",
+            "read"
+          ],
+          "descriptors": [
+            "00002902-0000-1000-8000-00805f9b34fb"
+          ],
+          "value": null,
+          "readable": true,
+          "writable": false,
+          "notifiable": true
+        },
+        {
+          "uuid": "00002b96-0000-1000-8000-00805f9b34fb",
+          "description": "Track Changed",
+          "properties": [
+            "notify"
+          ],
+          "descriptors": [
+            "00002902-0000-1000-8000-00805f9b34fb"
+          ],
+          "value": null,
+          "readable": false,
+          "writable": false,
+          "notifiable": true
+        },
+        {
+          "uuid": "00002b97-0000-1000-8000-00805f9b34fb",
+          "description": "Track Title",
+          "properties": [
+            "notify",
+            "read"
+          ],
+          "descriptors": [
+            "00002902-0000-1000-8000-00805f9b34fb"
+          ],
+          "value": null,
+          "readable": true,
+          "writable": false,
+          "notifiable": true
+        },
+        {
+          "uuid": "00002b98-0000-1000-8000-00805f9b34fb",
+          "description": "Track Duration",
+          "properties": [
+            "notify",
+            "read"
+          ],
+          "descriptors": [
+            "00002902-0000-1000-8000-00805f9b34fb"
+          ],
+          "value": null,
+          "readable": true,
+          "writable": false,
+          "notifiable": true
+        },
+        {
+          "uuid": "00002b99-0000-1000-8000-00805f9b34fb",
+          "description": "Track Position",
+          "properties": [
+            "notify",
+            "write",
+            "write-without-response",
+            "read"
+          ],
+          "descriptors": [
+            "00002902-0000-1000-8000-00805f9b34fb"
+          ],
+          "value": null,
+          "readable": true,
+          "writable": true,
+          "notifiable": true
+        },
+        {
+          "uuid": "00002ba1-0000-1000-8000-00805f9b34fb",
+          "description": "Playing Order",
+          "properties": [
+            "notify",
+            "write",
+            "write-without-response",
+            "read"
+          ],
+          "descriptors": [
+            "00002902-0000-1000-8000-00805f9b34fb"
+          ],
+          "value": null,
+          "readable": true,
+          "writable": true,
+          "notifiable": true
+        },
+        {
+          "uuid": "00002ba2-0000-1000-8000-00805f9b34fb",
+          "description": "Playing Orders Supported",
+          "properties": [
+            "read"
+          ],
+          "descriptors": [],
+          "value": null,
+          "readable": true,
+          "writable": false,
+          "notifiable": false
+        },
+        {
+          "uuid": "00002ba3-0000-1000-8000-00805f9b34fb",
+          "description": "Media State",
+          "properties": [
+            "notify",
+            "read"
+          ],
+          "descriptors": [
+            "00002902-0000-1000-8000-00805f9b34fb"
+          ],
+          "value": null,
+          "readable": true,
+          "writable": false,
+          "notifiable": true
+        },
+        {
+          "uuid": "00002ba4-0000-1000-8000-00805f9b34fb",
+          "description": "Media Control Point",
+          "properties": [
+            "notify",
+            "write",
+            "write-without-response"
+          ],
+          "descriptors": [
+            "00002902-0000-1000-8000-00805f9b34fb"
+          ],
+          "value": null,
+          "readable": false,
+          "writable": true,
+          "notifiable": true
+        },
+        {
+          "uuid": "00002ba5-0000-1000-8000-00805f9b34fb",
+          "description": "Media Control Point Opcodes Supported",
+          "properties": [
+            "notify",
+            "read"
+          ],
+          "descriptors": [
+            "00002902-0000-1000-8000-00805f9b34fb"
+          ],
+          "value": null,
+          "readable": true,
+          "writable": false,
+          "notifiable": true
+        },
+        {
+          "uuid": "00002bba-0000-1000-8000-00805f9b34fb",
+          "description": "Content Control ID",
+          "properties": [
+            "read"
+          ],
+          "descriptors": [],
+          "value": null,
+          "readable": true,
+          "writable": false,
+          "notifiable": false
+        }
+      ]
+    },
+    "00001855-0000-1000-8000-00805f9b34fb": {
+      "uuid": "00001855-0000-1000-8000-00805f9b34fb",
+      "description": "Telephony and Media Audio",
+      "characteristics": [
+        {
+          "uuid": "00002b51-0000-1000-8000-00805f9b34fb",
+          "description": "TMAP Role",
+          "properties": [
+            "read"
+          ],
+          "descriptors": [],
+          "value": null,
+          "readable": true,
+          "writable": false,
+          "notifiable": false
+        }
+      ]
+    },
+    "3ae9452b-677f-4dfc-97c4-0e0320de2a27": {
+      "uuid": "3ae9452b-677f-4dfc-97c4-0e0320de2a27",
+      "description": "Unknown",
+      "characteristics": [
+        {
+          "uuid": "2679146b-6c46-4477-9d6f-f49e9e0086ba",
+          "description": "Unknown",
+          "properties": [
+            "read"
+          ],
+          "descriptors": [],
+          "value": "36643535643237332d323961612d343465312d383661382d613363376461653862643337",
+          "readable": true,
+          "writable": false,
+          "notifiable": false
+        },
+        {
+          "uuid": "e42c40c7-57c2-4d81-8556-e1cb7fc9ceba",
+          "description": "Unknown",
+          "properties": [
+            "read"
+          ],
+          "descriptors": [],
+          "value": "",
+          "readable": true,
+          "writable": false,
+          "notifiable": false
+        },
+        {
+          "uuid": "3bc9c1cf-cbcc-450a-ba7c-b93a1d80b6e3",
+          "description": "Unknown",
+          "properties": [
+            "read"
+          ],
+          "descriptors": [],
+          "value": "362e332e362e30",
+          "readable": true,
+          "writable": false,
+          "notifiable": false
+        },
+        {
+          "uuid": "734fc10f-a645-41cc-8bb5-0c8592c26a16",
+          "description": "Unknown",
+          "properties": [
+            "read"
+          ],
+          "descriptors": [],
+          "value": "524f47",
+          "readable": true,
+          "writable": false,
+          "notifiable": false
+        }
+      ]
+    },
+    "8d8ba2cc-4b28-4d44-b6fd-a40761e988a9": {
+      "uuid": "8d8ba2cc-4b28-4d44-b6fd-a40761e988a9",
+      "description": "Unknown",
+      "characteristics": [
+        {
+          "uuid": "25d21d39-0ccd-4d46-8a68-4c3de9a70e74",
+          "description": "Unknown",
+          "properties": [
+            "read"
+          ],
+          "descriptors": [],
+          "value": "30",
+          "readable": true,
+          "writable": false,
+          "notifiable": false
+        },
+        {
+          "uuid": "b0d34242-c1d7-4414-8856-0e52bd579b3a",
+          "description": "Unknown",
+          "properties": [
+            "read"
+          ],
+          "descriptors": [],
+          "value": "30",
+          "readable": true,
+          "writable": false,
+          "notifiable": false
+        },
+        {
+          "uuid": "de24d790-9cfa-4d2f-9e70-067046db20a7",
+          "description": "Unknown",
+          "properties": [
+            "read"
+          ],
+          "descriptors": [],
+          "value": "30",
+          "readable": true,
+          "writable": false,
+          "notifiable": false
+        },
+        {
+          "uuid": "bd402a16-1de0-4027-8846-7ca72b8ad465",
+          "description": "Unknown",
+          "properties": [
+            "read"
+          ],
+          "descriptors": [],
+          "value": "30",
+          "readable": true,
+          "writable": false,
+          "notifiable": false
+        },
+        {
+          "uuid": "ba95b5c0-ccaf-4a65-a0f1-11cd0e2342cf",
+          "description": "Unknown",
+          "properties": [
+            "read"
+          ],
+          "descriptors": [],
+          "value": "",
+          "readable": true,
+          "writable": false,
+          "notifiable": false
+        },
+        {
+          "uuid": "ac82999e-e0bb-4ce2-a01a-564a1781e0f6",
+          "description": "Unknown",
+          "properties": [
+            "read"
+          ],
+          "descriptors": [],
+          "value": "30",
+          "readable": true,
+          "writable": false,
+          "notifiable": false
+        },
+        {
+          "uuid": "d3975e76-a1a5-4641-ae2d-4c8e5a4b2b0b",
+          "description": "Unknown",
+          "properties": [
+            "read"
+          ],
+          "descriptors": [],
+          "value": "30",
+          "readable": true,
+          "writable": false,
+          "notifiable": false
+        },
+        {
+          "uuid": "d349402b-18c3-45fc-8484-0ed15e24676a",
+          "description": "Unknown",
+          "properties": [
+            "read"
+          ],
+          "descriptors": [],
+          "value": "30",
+          "readable": true,
+          "writable": false,
+          "notifiable": false
+        },
+        {
+          "uuid": "65399ac2-9057-4b75-8295-56c8e8d7833e",
+          "description": "Unknown",
+          "properties": [
+            "read"
+          ],
+          "descriptors": [],
+          "value": "30",
+          "readable": true,
+          "writable": false,
+          "notifiable": false
+        },
+        {
+          "uuid": "4c4f6389-5f86-4848-8b7e-d884c3bd7b2d",
+          "description": "Unknown",
+          "properties": [
+            "read"
+          ],
+          "descriptors": [],
+          "value": "30",
+          "readable": true,
+          "writable": false,
+          "notifiable": false
+        },
+        {
+          "uuid": "ea619eb2-9d80-43b9-9fcf-9d96f6bc114f",
+          "description": "Unknown",
+          "properties": [
+            "read"
+          ],
+          "descriptors": [],
+          "value": "30",
+          "readable": true,
+          "writable": false,
+          "notifiable": false
+        }
+      ]
+    },
+    "90d1ed59-1d89-4da2-b465-451793ad0040": {
+      "uuid": "90d1ed59-1d89-4da2-b465-451793ad0040",
+      "description": "Unknown",
+      "characteristics": [
+        {
+          "uuid": "db993a71-cd99-4f4e-86a1-82d4759d676d",
+          "description": "Unknown",
+          "properties": [
+            "read"
+          ],
+          "descriptors": [],
+          "value": "30",
+          "readable": true,
+          "writable": false,
+          "notifiable": false
+        },
+        {
+          "uuid": "cce71033-144c-4d77-9689-8cacfe60e75f",
+          "description": "Unknown",
+          "properties": [
+            "read"
+          ],
+          "descriptors": [],
+          "value": "30",
+          "readable": true,
+          "writable": false,
+          "notifiable": false
+        },
+        {
+          "uuid": "710fe132-5e68-4e3a-acc4-c76fc0da68e1",
+          "description": "Unknown",
+          "properties": [
+            "read"
+          ],
+          "descriptors": [],
+          "value": "30",
+          "readable": true,
+          "writable": false,
+          "notifiable": false
+        },
+        {
+          "uuid": "e4e760c6-837d-4427-ae33-c84222e4d69a",
+          "description": "Unknown",
+          "properties": [
+            "read"
+          ],
+          "descriptors": [],
+          "value": "30",
+          "readable": true,
+          "writable": false,
+          "notifiable": false
+        },
+        {
+          "uuid": "c727a919-0edb-4c9e-8924-dd4f2d3f1c77",
+          "description": "Unknown",
+          "properties": [
+            "read"
+          ],
+          "descriptors": [],
+          "value": "30",
+          "readable": true,
+          "writable": false,
+          "notifiable": false
+        },
+        {
+          "uuid": "835daa1d-0c3f-41b6-b93b-f2a70454852e",
+          "description": "Unknown",
+          "properties": [
+            "read"
+          ],
+          "descriptors": [],
+          "value": "30",
+          "readable": true,
+          "writable": false,
+          "notifiable": false
+        },
+        {
+          "uuid": "21d35555-acc6-4cba-969b-50b829c6dcce",
+          "description": "Unknown",
+          "properties": [
+            "read"
+          ],
+          "descriptors": [],
+          "value": "30",
+          "readable": true,
+          "writable": false,
+          "notifiable": false
+        },
+        {
+          "uuid": "06dcee98-65c1-4756-9843-d64905823e6c",
+          "description": "Unknown",
+          "properties": [
+            "read"
+          ],
+          "descriptors": [],
+          "value": "30",
+          "readable": true,
+          "writable": false,
+          "notifiable": false
+        },
+        {
+          "uuid": "67d4f06e-1615-409e-8ecb-c771424bc6f0",
+          "description": "Unknown",
+          "properties": [
+            "read"
+          ],
+          "descriptors": [],
+          "value": "30",
+          "readable": true,
+          "writable": false,
+          "notifiable": false
+        },
+        {
+          "uuid": "6ac47bef-e42a-45a5-b344-35d0247db4fd",
+          "description": "Unknown",
+          "properties": [
+            "read"
+          ],
+          "descriptors": [],
+          "value": "30",
+          "readable": true,
+          "writable": false,
+          "notifiable": false
+        },
+        {
+          "uuid": "b3d7d179-862b-420d-a8bf-e97a9b6a7a78",
+          "description": "Unknown",
+          "properties": [
+            "read"
+          ],
+          "descriptors": [],
+          "value": "30",
+          "readable": true,
+          "writable": false,
+          "notifiable": false
+        },
+        {
+          "uuid": "1f629d79-55ac-4b8b-b169-13babf042ca4",
+          "description": "Unknown",
+          "properties": [
+            "read"
+          ],
+          "descriptors": [],
+          "value": "30",
+          "readable": true,
+          "writable": false,
+          "notifiable": false
+        },
+        {
+          "uuid": "421cde53-248f-41d4-ad45-ef2d3c7a4d2e",
+          "description": "Unknown",
+          "properties": [
+            "read"
+          ],
+          "descriptors": [],
+          "value": "30",
+          "readable": true,
+          "writable": false,
+          "notifiable": false
+        },
+        {
+          "uuid": "8170f76d-5696-4648-ba16-a66046b528bd",
+          "description": "Unknown",
+          "properties": [
+            "read"
+          ],
+          "descriptors": [],
+          "value": "30",
+          "readable": true,
+          "writable": false,
+          "notifiable": false
+        },
+        {
+          "uuid": "3503702f-892d-4d97-92fc-c5c10f3b4668",
+          "description": "Unknown",
+          "properties": [
+            "read"
+          ],
+          "descriptors": [],
+          "value": "30",
+          "readable": true,
+          "writable": false,
+          "notifiable": false
+        },
+        {
+          "uuid": "800c1669-5230-4a58-a2e8-f42a06214633",
+          "description": "Unknown",
+          "properties": [
+            "read"
+          ],
+          "descriptors": [],
+          "value": "30",
+          "readable": true,
+          "writable": false,
+          "notifiable": false
+        }
+      ]
+    },
+    "9a75cb9e-6810-4771-b66a-10997d5cabc6": {
+      "uuid": "9a75cb9e-6810-4771-b66a-10997d5cabc6",
+      "description": "Unknown",
+      "characteristics": [
+        {
+          "uuid": "318ee55a-dc01-4d08-b34b-cf53e21644d8",
+          "description": "Unknown",
+          "properties": [
+            "read"
+          ],
+          "descriptors": [],
+          "value": "30",
+          "readable": true,
+          "writable": false,
+          "notifiable": false
+        },
+        {
+          "uuid": "f532df03-f014-40ab-9fe6-99b015638130",
+          "description": "Unknown",
+          "properties": [
+            "read"
+          ],
+          "descriptors": [],
+          "value": "30",
+          "readable": true,
+          "writable": false,
+          "notifiable": false
+        },
+        {
+          "uuid": "8d79b193-bc0a-492d-a2a3-220becf26036",
+          "description": "Unknown",
+          "properties": [
+            "read"
+          ],
+          "descriptors": [],
+          "value": "30",
+          "readable": true,
+          "writable": false,
+          "notifiable": false
+        },
+        {
+          "uuid": "9a662bea-2a6e-468c-86b6-f139aff53e2c",
+          "description": "Unknown",
+          "properties": [
+            "read"
+          ],
+          "descriptors": [],
+          "value": "30",
+          "readable": true,
+          "writable": false,
+          "notifiable": false
+        },
+        {
+          "uuid": "1a2b498e-0245-493f-a496-124fa320a973",
+          "description": "Unknown",
+          "properties": [
+            "read"
+          ],
+          "descriptors": [],
+          "value": "30",
+          "readable": true,
+          "writable": false,
+          "notifiable": false
+        }
+      ]
+    },
+    "ffa66c1a-d997-46b3-93e0-11b4a198b93e": {
+      "uuid": "ffa66c1a-d997-46b3-93e0-11b4a198b93e",
+      "description": "Unknown",
+      "characteristics": [
+        {
+          "uuid": "f4776fb6-fa8e-44db-8f2f-6d13bd30561a",
+          "description": "Unknown",
+          "properties": [
+            "read"
+          ],
+          "descriptors": [],
+          "value": "30",
+          "readable": true,
+          "writable": false,
+          "notifiable": false
+        },
+        {
+          "uuid": "d2413025-6893-41f3-a8e9-b58cb52294e1",
+          "description": "Unknown",
+          "properties": [
+            "read"
+          ],
+          "descriptors": [],
+          "value": "30",
+          "readable": true,
+          "writable": false,
+          "notifiable": false
+        },
+        {
+          "uuid": "305f5d14-8899-469e-a7bb-13920a8fe2bc",
+          "description": "Unknown",
+          "properties": [
+            "read"
+          ],
+          "descriptors": [],
+          "value": "30",
+          "readable": true,
+          "writable": false,
+          "notifiable": false
+        },
+        {
+          "uuid": "5ddda29b-bca2-4616-ba88-58384bf0b2ca",
+          "description": "Unknown",
+          "properties": [
+            "read"
+          ],
+          "descriptors": [],
+          "value": "30",
+          "readable": true,
+          "writable": false,
+          "notifiable": false
+        }
+      ]
+    },
+    "20de0907-1906-477a-807a-494f7eb6b7be": {
+      "uuid": "20de0907-1906-477a-807a-494f7eb6b7be",
+      "description": "Unknown",
+      "characteristics": [
+        {
+          "uuid": "fb21dce4-1c99-4394-8a5c-c495125b38e9",
+          "description": "Unknown",
+          "properties": [
+            "read"
+          ],
+          "descriptors": [],
+          "value": "3331",
+          "readable": true,
+          "writable": false,
+          "notifiable": false
+        },
+        {
+          "uuid": "cce6b876-3daf-4a1d-a9ba-7aae736ae34d",
+          "description": "Unknown",
+          "properties": [
+            "read"
+          ],
+          "descriptors": [],
+          "value": "3331",
+          "readable": true,
+          "writable": false,
+          "notifiable": false
+        },
+        {
+          "uuid": "ace46ed8-acc1-4477-9502-79a59d6af663",
+          "description": "Unknown",
+          "properties": [
+            "write",
+            "read"
+          ],
+          "descriptors": [],
+          "value": "33",
+          "readable": true,
+          "writable": true,
+          "notifiable": false
+        },
+        {
+          "uuid": "a25be56b-e430-43fc-9abf-e0de10bb6ffa",
+          "description": "Unknown",
+          "properties": [
+            "read"
+          ],
+          "descriptors": [],
+          "value": "30",
+          "readable": true,
+          "writable": false,
+          "notifiable": false
+        },
+        {
+          "uuid": "722dbad1-444b-4fe9-b97d-6251de8f051f",
+          "description": "Unknown",
+          "properties": [
+            "read"
+          ],
+          "descriptors": [],
+          "value": "30",
+          "readable": true,
+          "writable": false,
+          "notifiable": false
+        }
+      ]
+    },
+    "92a3aadd-9840-41f6-9cfd-5cd9981087bd": {
+      "uuid": "92a3aadd-9840-41f6-9cfd-5cd9981087bd",
+      "description": "Unknown",
+      "characteristics": [
+        {
+          "uuid": "75c51cd0-d717-42dd-883c-79e57d7326b4",
+          "description": "Unknown",
+          "properties": [
+            "write",
+            "read"
+          ],
+          "descriptors": [],
+          "value": "",
+          "readable": true,
+          "writable": true,
+          "notifiable": false
+        },
+        {
+          "uuid": "f7904c54-f66f-42f3-9159-b6266b5b301b",
+          "description": "Unknown",
+          "properties": [
+            "read"
+          ],
+          "descriptors": [],
+          "value": "",
+          "readable": true,
+          "writable": false,
+          "notifiable": false
+        },
+        {
+          "uuid": "372a7f5a-6b57-4043-bc11-969fa83666fd",
+          "description": "Unknown",
+          "properties": [
+            "read"
+          ],
+          "descriptors": [],
+          "value": "",
+          "readable": true,
+          "writable": false,
+          "notifiable": false
+        },
+        {
+          "uuid": "e3a29ec8-8d0a-4b7f-a941-13effd2ce826",
+          "description": "Unknown",
+          "properties": [
+            "read"
+          ],
+          "descriptors": [],
+          "value": "30",
+          "readable": true,
+          "writable": false,
+          "notifiable": false
+        }
+      ]
+    },
+    "b30f0fd6-9e8c-4bbc-9ffc-4324c6b9c95d": {
+      "uuid": "b30f0fd6-9e8c-4bbc-9ffc-4324c6b9c95d",
+      "description": "Unknown",
+      "characteristics": [
+        {
+          "uuid": "eea6c562-fb72-4918-8cff-30a214548f91",
+          "description": "Unknown",
+          "properties": [
+            "write",
+            "read"
+          ],
+          "descriptors": [],
+          "value": "",
+          "readable": true,
+          "writable": true,
+          "notifiable": false
+        },
+        {
+          "uuid": "c8386086-675f-4ba4-8d5f-e1ffb55e4d54",
+          "description": "Unknown",
+          "properties": [
+            "read"
+          ],
+          "descriptors": [],
+          "value": "",
+          "readable": true,
+          "writable": false,
+          "notifiable": false
+        },
+        {
+          "uuid": "59e691b5-6ee1-4b8c-99d8-5247a54fdcb1",
+          "description": "Unknown",
+          "properties": [
+            "read"
+          ],
+          "descriptors": [],
+          "value": "",
+          "readable": true,
+          "writable": false,
+          "notifiable": false
+        },
+        {
+          "uuid": "b5c895d2-e513-42e2-b1d9-a5b2067bab02",
+          "description": "Unknown",
+          "properties": [
+            "read"
+          ],
+          "descriptors": [],
+          "value": "30",
+          "readable": true,
+          "writable": false,
+          "notifiable": false
+        }
+      ]
+    },
+    "f35fe7f5-f711-4a67-86a9-add1613c4e7d": {
+      "uuid": "f35fe7f5-f711-4a67-86a9-add1613c4e7d",
+      "description": "Unknown",
+      "characteristics": [
+        {
+          "uuid": "ae45f179-2caf-4ee1-aa72-ac36f9bc2ed7",
+          "description": "Unknown",
+          "properties": [
+            "write",
+            "read"
+          ],
+          "descriptors": [],
+          "value": "31",
+          "readable": true,
+          "writable": true,
+          "notifiable": false
+        },
+        {
+          "uuid": "c053f488-4ae9-471f-a1fc-8fb84c112a7c",
+          "description": "Unknown",
+          "properties": [
+            "read"
+          ],
+          "descriptors": [],
+          "value": "30",
+          "readable": true,
+          "writable": false,
+          "notifiable": false
+        },
+        {
+          "uuid": "a48a80e9-8f65-494b-9d95-f3687d560d48",
+          "description": "Unknown",
+          "properties": [
+            "read"
+          ],
+          "descriptors": [],
+          "value": "31",
+          "readable": true,
+          "writable": false,
+          "notifiable": false
+        },
+        {
+          "uuid": "14c59d98-1cad-4c82-a204-d0c9debd0cbd",
+          "description": "Unknown",
+          "properties": [
+            "read"
+          ],
+          "descriptors": [],
+          "value": "31",
+          "readable": true,
+          "writable": false,
+          "notifiable": false
+        }
+      ]
+    },
+    "af33ca26-249d-48d4-900b-db95774013c4": {
+      "uuid": "af33ca26-249d-48d4-900b-db95774013c4",
+      "description": "Unknown",
+      "characteristics": [
+        {
+          "uuid": "9080b4e8-501a-47b6-960e-c23d058ecd47",
+          "description": "Unknown",
+          "properties": [
+            "write",
+            "read"
+          ],
+          "descriptors": [],
+          "value": "31",
+          "readable": true,
+          "writable": true,
+          "notifiable": false
+        },
+        {
+          "uuid": "83bdf9da-e683-4a4e-bbca-11a0597355c9",
+          "description": "Unknown",
+          "properties": [
+            "read"
+          ],
+          "descriptors": [],
+          "value": "30",
+          "readable": true,
+          "writable": false,
+          "notifiable": false
+        },
+        {
+          "uuid": "b787e93a-803d-4626-b7d5-580278c67676",
+          "description": "Unknown",
+          "properties": [
+            "read"
+          ],
+          "descriptors": [],
+          "value": "31",
+          "readable": true,
+          "writable": false,
+          "notifiable": false
+        },
+        {
+          "uuid": "c8ea3749-dda6-4759-ac09-db953ee91c04",
+          "description": "Unknown",
+          "properties": [
+            "read"
+          ],
+          "descriptors": [],
+          "value": "31",
+          "readable": true,
+          "writable": false,
+          "notifiable": false
+        }
+      ]
+    },
+    "bc441388-1ea8-44f7-b200-d85f510d40fc": {
+      "uuid": "bc441388-1ea8-44f7-b200-d85f510d40fc",
+      "description": "Unknown",
+      "characteristics": [
+        {
+          "uuid": "9881f70f-4faf-45b5-807c-e9f008bfa025",
+          "description": "Unknown",
+          "properties": [
+            "write",
+            "read"
+          ],
+          "descriptors": [],
+          "value": "30",
+          "readable": true,
+          "writable": true,
+          "notifiable": false
+        },
+        {
+          "uuid": "5428306c-d588-4330-bbc1-c5e5b550ef39",
+          "description": "Unknown",
+          "properties": [
+            "write"
+          ],
+          "descriptors": [],
+          "value": null,
+          "readable": false,
+          "writable": true,
+          "notifiable": false
+        },
+        {
+          "uuid": "a5667847-b20e-4c19-9fc2-859d13d28b03",
+          "description": "Unknown",
+          "properties": [
+            "write"
+          ],
+          "descriptors": [],
+          "value": null,
+          "readable": false,
+          "writable": true,
+          "notifiable": false
+        },
+        {
+          "uuid": "34ca7700-a7ab-4504-987b-a7d35c00c07c",
+          "description": "Unknown",
+          "properties": [
+            "write"
+          ],
+          "descriptors": [],
+          "value": null,
+          "readable": false,
+          "writable": true,
+          "notifiable": false
+        }
+      ]
+    },
+    "6f4060a2-2cb2-4851-8a1f-23ee636d1d67": {
+      "uuid": "6f4060a2-2cb2-4851-8a1f-23ee636d1d67",
+      "description": "Unknown",
+      "characteristics": [
+        {
+          "uuid": "e9d42346-2c93-4beb-b137-e48928bb7ee5",
+          "description": "Unknown",
+          "properties": [
+            "read"
+          ],
+          "descriptors": [],
+          "value": "",
+          "readable": true,
+          "writable": false,
+          "notifiable": false
+        },
+        {
+          "uuid": "664df709-a4dc-4c6a-824a-774099a75de9",
+          "description": "Unknown",
+          "properties": [
+            "write",
+            "read"
+          ],
+          "descriptors": [],
+          "value": "",
+          "readable": true,
+          "writable": true,
+          "notifiable": false
+        },
+        {
+          "uuid": "b930326d-be2e-4041-857b-0b4c6e964fd8",
+          "description": "Unknown",
+          "properties": [
+            "read"
+          ],
+          "descriptors": [],
+          "value": "",
+          "readable": true,
+          "writable": false,
+          "notifiable": false
+        },
+        {
+          "uuid": "77bf7928-300d-4ff0-bd05-f061c3b88b7c",
+          "description": "Unknown",
+          "properties": [
+            "read"
+          ],
+          "descriptors": [],
+          "value": "",
+          "readable": true,
+          "writable": false,
+          "notifiable": false
+        },
+        {
+          "uuid": "02a9f836-7c3e-40f9-a2c4-a3a9353cce7f",
+          "description": "Unknown",
+          "properties": [
+            "read"
+          ],
+          "descriptors": [],
+          "value": "",
+          "readable": true,
+          "writable": false,
+          "notifiable": false
+        },
+        {
+          "uuid": "e3a583dd-4553-41d4-b091-63437e6f5af2",
+          "description": "Unknown",
+          "properties": [
+            "read"
+          ],
+          "descriptors": [],
+          "value": "",
+          "readable": true,
+          "writable": false,
+          "notifiable": false
+        },
+        {
+          "uuid": "31d7e71d-6f1d-43fa-a1a3-0a6a54f9820e",
+          "description": "Unknown",
+          "properties": [
+            "read"
+          ],
+          "descriptors": [],
+          "value": "",
+          "readable": true,
+          "writable": false,
+          "notifiable": false
+        },
+        {
+          "uuid": "204ad3bf-5cce-442f-93a4-2cf170ed10c0",
+          "description": "Unknown",
+          "properties": [
+            "read"
+          ],
+          "descriptors": [],
+          "value": "",
+          "readable": true,
+          "writable": false,
+          "notifiable": false
+        },
+        {
+          "uuid": "49bf7c11-58ec-4cc4-b789-b623ca46d3f2",
+          "description": "Unknown",
+          "properties": [
+            "read"
+          ],
+          "descriptors": [],
+          "value": "",
+          "readable": true,
+          "writable": false,
+          "notifiable": false
+        },
+        {
+          "uuid": "8bc3e241-4f55-44ce-b49c-94ba39a0f192",
+          "description": "Unknown",
+          "properties": [
+            "read"
+          ],
+          "descriptors": [],
+          "value": "",
+          "readable": true,
+          "writable": false,
+          "notifiable": false
+        },
+        {
+          "uuid": "2c4e1e3f-2134-41af-ac8d-54d8eb4ef8e2",
+          "description": "Unknown",
+          "properties": [
+            "read"
+          ],
+          "descriptors": [],
+          "value": "",
+          "readable": true,
+          "writable": false,
+          "notifiable": false
+        },
+        {
+          "uuid": "f8db511d-ecdb-497b-ac86-d761d2dae0fb",
+          "description": "Unknown",
+          "properties": [
+            "read"
+          ],
+          "descriptors": [],
+          "value": "",
+          "readable": true,
+          "writable": false,
+          "notifiable": false
+        }
+      ]
+    }
+  }
+}

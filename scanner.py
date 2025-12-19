@@ -4,7 +4,12 @@ Author: Boldizsar Keszthelyi
 Date: 02/12/2025
 
 Basic scanner to discover BLE devices and analyze pairing methods. 
+The scan results help in identifying potential vulnerable devices, allowing for further analysis.
+Device fingerprinting is also possible via manufacturer data and service UUIDs.
+
 Inspired by concepts from gattacker.
+
+Need to test with our actual OAT1040 tracker device still, but seemed to be working fine. 
 """
 
 import asyncio

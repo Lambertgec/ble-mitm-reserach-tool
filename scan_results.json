@@ -1,0 +1,333 @@
+{
+  "38:3D:C2:18:22:32": {
+    "name": "Unknown",
+    "address": "38:3D:C2:18:22:32",
+    "rssi": -76,
+    "services": [],
+    "manufacturer_data": {
+      "6": "01092022ec11818e4812e8aa5557e48c8060a6e731875e72b32a98"
+    },
+    "timestamp": "2025-12-04T15:39:04.394842"
+  },
+  "7F:24:1F:0F:68:1C": {
+    "name": "Unknown",
+    "address": "7F:24:1F:0F:68:1C",
+    "rssi": -61,
+    "services": [],
+    "manufacturer_data": {
+      "76": "0f05900022109e10022f04"
+    },
+    "timestamp": "2025-12-04T15:39:04.395132"
+  },
+  "D5:82:53:5E:1D:E2": {
+    "name": "Unknown",
+    "address": "D5:82:53:5E:1D:E2",
+    "rssi": -85,
+    "services": [],
+    "manufacturer_data": {
+      "76": "12026503"
+    },
+    "timestamp": "2025-12-04T15:39:04.395257"
+  },
+  "62:38:C0:AB:15:B5": {
+    "name": "Unknown",
+    "address": "62:38:C0:AB:15:B5",
+    "rssi": -83,
+    "services": [],
+    "manufacturer_data": {
+      "76": "0c0e001ed543ad565d992113eec528341005761c7f7da5"
+    },
+    "timestamp": "2025-12-04T15:39:04.395427"
+  },
+  "07:DA:83:76:62:64": {
+    "name": "Unknown",
+    "address": "07:DA:83:76:62:64",
+    "rssi": -78,
+    "services": [],
+    "manufacturer_data": {
+      "6": "010920229addc4a05b2c7ab74063e05c4f3fa7df03adc6ff210a9b"
+    },
+    "timestamp": "2025-12-04T15:39:04.395597"
+  },
+  "44:75:20:11:8B:19": {
+    "name": "Unknown",
+    "address": "44:75:20:11:8B:19",
+    "rssi": -73,
+    "services": [],
+    "manufacturer_data": {
+      "76": "130100"
+    },
+    "timestamp": "2025-12-04T15:39:04.395695"
+  },
+  "50:CE:96:CD:F2:BA": {
+    "name": "Unknown",
+    "address": "50:CE:96:CD:F2:BA",
+    "rssi": -73,
+    "services": [],
+    "manufacturer_data": {
+      "76": "09081303c0a858e01b581608005c1b8c136567a1"
+    },
+    "timestamp": "2025-12-04T15:39:04.395848"
+  },
+  "50:5C:48:47:02:9E": {
+    "name": "Unknown",
+    "address": "50:5C:48:47:02:9E",
+    "rssi": -73,
+    "services": [],
+    "manufacturer_data": {
+      "76": "090813c1c0a858d91b58160800b7ba38838a3d7a"
+    },
+    "timestamp": "2025-12-04T15:39:04.395973"
+  },
+  "3B:6B:46:4D:44:11": {
+    "name": "Unknown",
+    "address": "3B:6B:46:4D:44:11",
+    "rssi": -60,
+    "services": [],
+    "manufacturer_data": {
+      "76": "13084ab7f8d38cd05400"
+    },
+    "timestamp": "2025-12-04T15:39:04.396143"
+  },
+  "7F:E5:49:23:5E:3E": {
+    "name": "Unknown",
+    "address": "7F:E5:49:23:5E:3E",
+    "rssi": -71,
+    "services": [],
+    "manufacturer_data": {
+      "76": "1007791fa47eadb5d8"
+    },
+    "timestamp": "2025-12-04T15:39:04.396398"
+  },
+  "4B:ED:12:FF:A5:47": {
+    "name": "Unknown",
+    "address": "4B:ED:12:FF:A5:47",
+    "rssi": -70,
+    "services": [],
+    "manufacturer_data": {
+      "76": "10050b1c6ec5f8"
+    },
+    "timestamp": "2025-12-04T15:39:04.396615"
+  },
+  "47:13:6F:A0:4C:D9": {
+    "name": "Unknown",
+    "address": "47:13:6F:A0:4C:D9",
+    "rssi": -62,
+    "services": [
+      "0000180a-0000-1000-8000-00805f9b34fb",
+      "3ae9452b-677f-4dfc-97c4-0e0320de2a27"
+    ],
+    "manufacturer_data": {},
+    "timestamp": "2025-12-04T15:39:04.396847"
+  },
+  "64:C1:19:DA:EE:C5": {
+    "name": "Unknown",
+    "address": "64:C1:19:DA:EE:C5",
+    "rssi": -64,
+    "services": [],
+    "manufacturer_data": {
+      "76": "0c0e0051d4d8c8e539d535cb3850f57e10064d1dbdcc4238"
+    },
+    "timestamp": "2025-12-04T15:39:04.397020"
+  },
+  "2E:EB:DA:37:B5:1E": {
+    "name": "Unknown",
+    "address": "2E:EB:DA:37:B5:1E",
+    "rssi": -86,
+    "services": [],
+    "manufacturer_data": {
+      "6": "010f2022971c99361900bec024239c084d32041de3293424e997c6"
+    },
+    "timestamp": "2025-12-04T15:39:04.397417"
+  },
+  "43:89:B4:EB:E7:64": {
+    "name": "Unknown",
+    "address": "43:89:B4:EB:E7:64",
+    "rssi": -80,
+    "services": [],
+    "manufacturer_data": {
+      "76": "0c0e0051d4d8c8e539d535cb3850f57e10064d1dbdcc4238"
+    },
+    "timestamp": "2025-12-04T15:39:04.397759"
+  },
+  "4F:6A:6F:9B:60:4D": {
+    "name": "Unknown",
+    "address": "4F:6A:6F:9B:60:4D",
+    "rssi": -70,
+    "services": [],
+    "manufacturer_data": {
+      "76": "0719010e2002f28f0000086b38a510f7d73d20ea13439edb29dcc9"
+    },
+    "timestamp": "2025-12-04T15:39:04.397954"
+  },
+  "33:3F:31:90:4D:2A": {
+    "name": "Unknown",
+    "address": "33:3F:31:90:4D:2A",
+    "rssi": -85,
+    "services": [],
+    "manufacturer_data": {
+      "6": "01092002799d81d5ee00c2192786b0c49e7bb41833cc09aa1b37d7"
+    },
+    "timestamp": "2025-12-04T15:39:04.398167"
+  },
+  "6E:DC:36:E3:01:5C": {
+    "name": "Unknown",
+    "address": "6E:DC:36:E3:01:5C",
+    "rssi": -66,
+    "services": [],
+    "manufacturer_data": {
+      "76": "090813a8c0a858e21b58160800d367235de7b5e5"
+    },
+    "timestamp": "2025-12-04T15:39:04.398377"
+  },
+  "1D:2C:E5:96:66:1F": {
+    "name": "Unknown",
+    "address": "1D:2C:E5:96:66:1F",
+    "rssi": -80,
+    "services": [],
+    "manufacturer_data": {
+      "6": "01092022d7fb6705cfc45daa6844cbebea89ef893e20135aa8174d"
+    },
+    "timestamp": "2025-12-04T15:39:04.398488"
+  },
+  "D3:FF:94:9D:BD:8D": {
+    "name": "Unknown",
+    "address": "D3:FF:94:9D:BD:8D",
+    "rssi": -72,
+    "services": [],
+    "manufacturer_data": {
+      "76": "12025401"
+    },
+    "timestamp": "2025-12-04T15:39:04.399002"
+  },
+  "52:4D:B3:D0:D2:FD": {
+    "name": "Unknown",
+    "address": "52:4D:B3:D0:D2:FD",
+    "rssi": -65,
+    "services": [],
+    "manufacturer_data": {
+      "76": "1006041d900fa868"
+    },
+    "timestamp": "2025-12-04T15:39:04.399274"
+  },
+  "8C:26:AA:C8:DE:8C": {
+    "name": "Unknown",
+    "address": "8C:26:AA:C8:DE:8C",
+    "rssi": -64,
+    "services": [],
+    "manufacturer_data": {
+      "76": "100506142e4bbc"
+    },
+    "timestamp": "2025-12-04T15:39:04.399522"
+  },
+  "40:54:2E:C2:91:38": {
+    "name": "Unknown",
+    "address": "40:54:2E:C2:91:38",
+    "rssi": -76,
+    "services": [],
+    "manufacturer_data": {
+      "76": "10060a1d3c950e78"
+    },
+    "timestamp": "2025-12-04T15:39:04.399982"
+  },
+  "4F:AB:20:4E:E3:36": {
+    "name": "Unknown",
+    "address": "4F:AB:20:4E:E3:36",
+    "rssi": -71,
+    "services": [],
+    "manufacturer_data": {
+      "76": "10052d98087262"
+    },
+    "timestamp": "2025-12-04T15:39:04.400243"
+  },
+  "E4:98:BB:3D:02:E4": {
+    "name": "LEDnetWF0200413D02E4",
+    "address": "E4:98:BB:3D:02:E4",
+    "rssi": -77,
+    "services": [],
+    "manufacturer_data": {
+      "23040": "6205e498bb3d02e400412103010024610011ff00000003000f0000"
+    },
+    "timestamp": "2025-12-04T15:39:04.400479"
+  },
+  "E4:E7:1C:0F:B7:73": {
+    "name": "Unknown",
+    "address": "E4:E7:1C:0F:B7:73",
+    "rssi": -78,
+    "services": [],
+    "manufacturer_data": {
+      "76": "12020001"
+    },
+    "timestamp": "2025-12-04T15:39:04.400711"
+  },
+  "F0:89:C1:E5:C6:E3": {
+    "name": "Lamp\u0103",
+    "address": "F0:89:C1:E5:C6:E3",
+    "rssi": -78,
+    "services": [
+      "0000fe0f-0000-1000-8000-00805f9b34fb"
+    ],
+    "manufacturer_data": {},
+    "timestamp": "2025-12-04T15:39:04.400921"
+  },
+  "52:D6:E9:B8:47:11": {
+    "name": "Unknown",
+    "address": "52:D6:E9:B8:47:11",
+    "rssi": -83,
+    "services": [],
+    "manufacturer_data": {
+      "76": "10050f1c7668dd"
+    },
+    "timestamp": "2025-12-04T15:39:04.401178"
+  },
+  "FF:83:E8:E0:62:7A": {
+    "name": "Unknown",
+    "address": "FF:83:E8:E0:62:7A",
+    "rssi": -79,
+    "services": [],
+    "manufacturer_data": {
+      "76": "12020002"
+    },
+    "timestamp": "2025-12-04T15:39:04.401405"
+  },
+  "72:64:10:2B:35:07": {
+    "name": "Unknown",
+    "address": "72:64:10:2B:35:07",
+    "rssi": -84,
+    "services": [],
+    "manufacturer_data": {
+      "76": "10055118af8bc7"
+    },
+    "timestamp": "2025-12-04T15:39:04.401577"
+  },
+  "E5:A1:1C:F2:6C:84": {
+    "name": "Unknown",
+    "address": "E5:A1:1C:F2:6C:84",
+    "rssi": -75,
+    "services": [],
+    "manufacturer_data": {
+      "76": "12020002"
+    },
+    "timestamp": "2025-12-04T15:39:04.401763"
+  },
+  "77:9A:3B:EE:0F:C9": {
+    "name": "Unknown",
+    "address": "77:9A:3B:EE:0F:C9",
+    "rssi": -71,
+    "services": [],
+    "manufacturer_data": {
+      "76": "1007701f81ccb06888"
+    },
+    "timestamp": "2025-12-04T15:39:04.401944"
+  },
+  "42:C9:F0:F5:BF:C7": {
+    "name": "Unknown",
+    "address": "42:C9:F0:F5:BF:C7",
+    "rssi": -86,
+    "services": [],
+    "manufacturer_data": {
+      "76": "1007361f7d19a1cb48"
+    },
+    "timestamp": "2025-12-04T15:39:04.402251"
+  }
+}
