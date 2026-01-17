@@ -18,6 +18,7 @@ Run:
 import argparse
 import asyncio
 import logging
+import sys
 from typing import Any, Callable, Dict, List, Optional
 
 from bleak import BleakClient
@@ -325,12 +326,18 @@ class FakeOAT1040Peripheral:
         self.adv_path = "/com/mitm/advertisement"
         self.agent_path = "/com/mitm/agent"
         self.on_phone_write: Optional[Callable[[str, bytes], None]] = None
+        self.write_modifier: Optional[Callable[[str, bytes], bytes]] = None
         self._chars: Dict[str, GattCharacteristic] = {}
         self._app = Application(self.app_path)
         self._target_uuid_map: Dict[str, str] = {}  # Map fake UUIDs to target UUIDs
 
     def set_write_callback(self, cb: Callable[[str, bytes], None]) -> None:
         self.on_phone_write = cb
+
+    def set_write_modifier(self, modifier: Callable[[str, bytes], bytes]) -> None:
+        """Set a callback to modify write data before forwarding to real device.
+        The modifier function receives (uuid, data) and returns modified data."""
+        self.write_modifier = modifier
 
     def set_notification_callback(self, char: GattCharacteristic, cb: Callable[[bytes], None]) -> None:
         """Store callback to notify phone of target device updates"""
@@ -383,7 +390,6 @@ class FakeOAT1040Peripheral:
                             # Create a closure to capture the UUID correctly
                             def make_handler(uuid_str):
                                 def handler(sender, data):
-                                    # Use asyncio.run_coroutine_threadsafe for thread-safe async call
                                     loop = asyncio.get_event_loop()
                                     asyncio.run_coroutine_threadsafe(
                                         self.forward_notification(uuid_str, bytes(data)), 
@@ -419,14 +425,26 @@ class FakeOAT1040Peripheral:
             LOG.debug("No matching characteristic found for UUID %s", source_uuid)
 
     async def forward_write(self, uuid: str, data: bytes) -> None:
-        """Forward write from phone to target device"""
+        """Forward write from phone to target device, with optional modification"""
         if not self.central_client or not self.central_client.is_connected:
             LOG.warning("Central client not connected, cannot forward write")
             return
 
-        try:
+        # Apply write modifier if registered
+        if self.write_modifier:
+            original_data = data
+            data = self.write_modifier(uuid, data)
+            if data != original_data:
+                LOG.info("PHONE -> REAL (write) %s: %s -> %s (modified)", uuid, original_data.hex(), data.hex())
+                print(f"\n>>> MODIFIED WRITE: UUID={uuid} Data {original_data.hex()} -> {data.hex()}\n")
+            else:
+                LOG.info("PHONE -> REAL (write) %s: %s", uuid, data.hex())
+                print(f"\n>>> FORWARDING to real device: UUID={uuid} Data={data.hex()}\n")
+        else:
             LOG.info("PHONE -> REAL (write) %s: %s", uuid, data.hex())
             print(f"\n>>> FORWARDING to real device: UUID={uuid} Data={data.hex()}\n")
+
+        try:
             await self.central_client.write_gatt_char(uuid, data)
         except Exception as e:
             LOG.error("Failed to forward write to %s: %s", uuid, e)
@@ -523,9 +541,9 @@ class FakeOAT1040Peripheral:
             path=char_fea1_path,
             uuid="0000fea1-0000-1000-8000-00805f9b34fb",
             service_path=svc_fee7_path,
-            flags=["notify"],
+            flags=["notify", "indicate"],
             props_iface=props_fea1,
-            initial_value=b"\x07" + b"\x00" * 9,
+            initial_value=b"\x07" + b"\x4B" + b"\x00" * 2 + b"\x2D" + b"\x00" * 2 + b"\x39" + b"\x06" + b"\x00",
             on_client_connect=_phone_connected,
         )
 
@@ -607,6 +625,127 @@ class FakeOAT1040Peripheral:
             return
         ch.push_notify(data)
 
+def create_write_modifiers() -> Dict[str, Callable[[str, bytes], bytes]]:
+    """Create a collection of pre-defined write modifiers"""
+    
+    def pass_through(uuid: str, data: bytes) -> bytes:
+        """No modification"""
+        return data
+    
+    def modify_drop(uuid: str, data: bytes) -> bytes:
+        """Drop writes - don't forward anything"""
+        return bytes()
+    
+    def modify_random(uuid: str, data: bytes) -> bytes:
+        """Replace data with random bytes"""
+        import random
+        return bytes([random.randint(0, 255) for _ in range(len(data))])
+    
+    def modify_zeros(uuid: str, data: bytes) -> bytes:
+        """Replace data with zeros"""
+        return bytes([0] * len(data))
+    
+    def modify_ones(uuid: str, data: bytes) -> bytes:
+        """Replace data with 0xFF"""
+        return bytes([0xFF] * len(data))
+    
+    def modify_invert(uuid: str, data: bytes) -> bytes:
+        """Bitwise invert all bytes"""
+        return bytes([b ^ 0xFF for b in data])
+    
+    def modify_increment(uuid: str, data: bytes) -> bytes:
+        """Increment all bytes by 1"""
+        return bytes([(b + 1) & 0xFF for b in data])
+    
+    return {
+        "pass": pass_through,
+        "drop": modify_drop,
+        "random": modify_random,
+        "zeros": modify_zeros,
+        "ones": modify_ones,
+        "invert": modify_invert,
+        "increment": modify_increment,
+    }
+
+
+async def handle_interactive_commands(fake: "FakeOAT1040Peripheral", modifiers: Dict[str, Callable[[str, bytes], bytes]]) -> None:
+    """Read commands from stdin and modify write behavior dynamically"""
+    
+    loop = asyncio.get_event_loop()
+    
+    def read_line() -> str:
+        """Read a line from stdin (blocking call wrapped for async)"""
+        try:
+            return sys.stdin.readline().strip()
+        except EOFError:
+            return ""
+    
+    while True:
+        try:
+            # Read command in a thread to avoid blocking the event loop
+            cmd = await loop.run_in_executor(None, read_line)
+            
+            if not cmd:
+                continue
+            
+            parts = cmd.lower().split()
+            if not parts:
+                continue
+            
+            command = parts[0]
+            
+            if command in ["help", "?"]:
+                print("\n" + "="*60)
+                print("INTERACTIVE COMMANDS:")
+                print("="*60)
+                print("  modify pass      - Forward writes unchanged (default)")
+                print("  modify drop      - Don't forward anything (drop writes)")
+                print("  modify random    - Replace with random bytes")
+                print("  modify zeros     - Replace with all 0x00")
+                print("  modify ones      - Replace with all 0xFF")
+                print("  modify invert    - Bitwise invert all bytes")
+                print("  modify increment - Increment all bytes by 1")
+                print("  status           - Show current modifier")
+                print("  help, ?          - Show this help")
+                print("="*60 + "\n")
+            
+            elif command == "status":
+                current = fake.write_modifier
+                if current is None:
+                    print("\n>>> Current modifier: NONE (forwarding unchanged)\n")
+                else:
+                    # Try to identify which modifier is active
+                    for name, mod_func in modifiers.items():
+                        if current == mod_func:
+                            print(f"\n>>> Current modifier: {name.upper()}\n")
+                            break
+                    else:
+                        print("\n>>> Current modifier: CUSTOM\n")
+            
+            elif command == "modify":
+                if len(parts) < 2:
+                    print("\n>>> Usage: modify [pass|random|zeros|ones|invert|increment]\n")
+                    continue
+                
+                modifier_name = parts[1]
+                
+                if modifier_name not in modifiers:
+                    print(f"\n>>> Unknown modifier: {modifier_name}\n")
+                    print(f">>> Available: {', '.join(modifiers.keys())}\n")
+                    continue
+                
+                fake.set_write_modifier(modifiers[modifier_name])
+                print(f"\n>>> Write modifier set to: {modifier_name.upper()}\n")
+            
+            else:
+                print(f"\n>>> Unknown command: {command}\n")
+                print(">>> Type 'help' for commands\n")
+        
+        except Exception as e:
+            LOG.error("Error in command handler: %s", e)
+        
+        await asyncio.sleep(0.1)
+
 
 async def main() -> None:
     parser = argparse.ArgumentParser()
@@ -628,6 +767,24 @@ async def main() -> None:
 
     fake.set_write_callback(on_write)
 
+    # Create write modifiers
+    modifiers = create_write_modifiers()
+    
+    # Print interactive help
+    print("\n" + "="*60)
+    print("INTERACTIVE WRITE MODIFIER COMMANDS:")
+    print("="*60)
+    print("  modify pass      - Forward writes unchanged (default)")
+    print("  modify drop      - Don't forward anything (drop writes)")
+    print("  modify random    - Replace with random bytes")
+    print("  modify zeros     - Replace with all 0x00")
+    print("  modify ones      - Replace with all 0xFF")
+    print("  modify invert    - Bitwise invert all bytes")
+    print("  modify increment - Increment all bytes by 1")
+    print("  status           - Show current modifier")
+    print("  help, ?          - Show commands")
+    print("="*60 + "\n")
+
     try:
         await fake.start()
         
@@ -637,6 +794,9 @@ async def main() -> None:
     except Exception as e:
         LOG.error("Failed to start peripheral: %s", e)
         return
+
+    # Start the interactive command handler as a background task
+    command_task = asyncio.create_task(handle_interactive_commands(fake, modifiers))
 
     # Main loop
     try:
@@ -666,6 +826,7 @@ async def main() -> None:
             await asyncio.sleep(1.0)
     except KeyboardInterrupt:
         LOG.info("Exiting...")
+        command_task.cancel()
         if fake.central_client:
             await fake.central_client.disconnect()
 
