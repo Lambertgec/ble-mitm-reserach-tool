@@ -39,10 +39,10 @@ Connect to the device to monitor notifications and manually send commands.
 ### 4. MITM Attack (Linux Only)
 This script acts as the Man-in-the-Middle. It advertises as the target device to the victim (e.g., phone) while simultaneously connecting to the real target device.
 
-# Stop default bluetoothd if it interferes (optional/depends on setup)
+#### Stop default bluetoothd if it interferes (optional/depends on setup)
 > sudo systemctl stop bluetooth 
 
-# Run the MITM proxy
+#### Run the MITM proxy
 > sudo -E python fake_oat1040_bluez.py --adapter hci0 --target <TARGET_MAC_ADDRESS> --debug
 
 ## Hardware 
