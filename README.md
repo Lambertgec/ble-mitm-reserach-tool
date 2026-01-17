@@ -15,7 +15,7 @@ Python tool for analyzing BLE security, specifically testing "Just Works" pairin
 - [x] MITM proxy
 - [x] Packet modification
 
-## 📖 Usage Guide
+## Usage Guide
 
 ### 1. Scanning (Windows & Linux)
 Discover nearby BLE devices to find your target's MAC address.
