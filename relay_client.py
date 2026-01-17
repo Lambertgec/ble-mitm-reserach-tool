@@ -8,7 +8,7 @@ Date: 05/12/2025
 - Subscribes to notifiable characteristics and prints incoming data
 - Lets us send writes to writable characteristics using a simple CLI
 
-Usage: python relay_client.py <BLE MAC address>
+Usage: python relay_client.py 78:02:B7:2B:40:C9
 """
 
 import asyncio
