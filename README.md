@@ -21,12 +21,14 @@ Python tool for analyzing BLE security, specifically testing "Just Works" pairin
 Discover nearby BLE devices to find your target's MAC address.
 
 > python scanner.py
+
 *Output: Saves discovered devices to `scan_results.json`.*
 
 ### 2. Service Enumeration (Windows & Linux)
 Once you have the target MAC address (e.g., \`78:02:B7:2B:40:C9\`), generate a device profile.
 
 > python GATT_enum.py <TARGET_MAC_ADDRESS>
+
 *Output: Generates a profile file like \`78_02_B7_2B_40_C9_profile.json\`.*
 
 ### 3. Relay / Inspection Client (Windows & Linux)
