@@ -4,7 +4,7 @@ Author: Modified for WSL support
 Date: 10/01/2026
 
 This module provides peripheral emulation capabilities for the MITM proxy
-using BlueZ on Linux systems (including WSL).
+using BlueZ on Linux systems.
 
 Requirements:
 - BlueZ installed
